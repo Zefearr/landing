@@ -1,0 +1,72 @@
+
+
+
+.btn {
+   
+    
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 100;
+    display: inline-block; 
+    
+    @mixin atMedium {
+         background-color: #677077;
+    }
+    
+    &--header {    
+        color: #fff;
+        display: inline-block; 
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 10px 20px;
+        background-color: #DAAD86;
+        border-radius: 3px;
+        text-shadow: 1px 1px 0 rgba(0,0,0, .2);
+    }
+    
+     &--header:hover {
+       background-color: rgba(#EE9142, .9); 
+    }
+     &--video {    
+        color: #1d2120;
+        display: inline-block; 
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 10px 40px;
+        background-color: #DAAD86;
+        border-radius: 3px;
+        text-shadow: 1px 1px 0 rgba(0,0,0, .3);
+    }
+    
+     &--video:hover {
+       background-color: rgba(#EE9142, .9); 
+    }
+    
+    
+    &--orange {
+        background-color:#DAAD86;
+        padding: 1rem 1rem;
+        font-size: 1rem;
+        color: #fff;
+        border-radius: 3px;
+        font-weight: 400;
+       margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 0 rgba(0,0,0, .2);
+      
+    }
+      &--orange:hover {
+       background-color: rgba(#EE9142, .9); 
+    }
+    &--large {
+        background-color: $mainOrange;
+        padding: .5rem 1.2rem;
+        font-size: 1rem;
+        
+        @mixin atSmall {
+            font-size: 1.8rem;
+            padding: .5rem 2.3rem;
+        }
+    }
+}

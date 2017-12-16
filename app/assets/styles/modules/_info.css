@@ -1,0 +1,109 @@
+.info {
+   
+    &__title {
+     
+        margin: 0;
+       
+     
+        
+        font-weight: 400;
+       
+
+    }
+    
+    &__content {
+   transition: all .3s ease;
+      height: 0;
+        p {
+          
+            transform: translateX(200%);
+        }
+        
+        
+    }
+    
+    &__content--expanded {
+    
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        height: 100px;
+         p {
+             transform: translateX(0%);
+           
+             transition: transform .3s ease;
+        }
+      
+        @mixin atMedium {
+            margin:0;
+             padding-left:0;
+            
+        }
+    }
+    
+    &__menu-icon {
+        width: 30px;
+        margin-left: 5rem;
+        height: 30px; 
+        cursor: pointer;
+       display: inline-block; 
+        z-index: 10;
+        background:  url('../../assets/images/png_icons/arrowsliderwhite.png') top center no-repeat;     
+        background-size: cover; 
+        transform: rotate(0deg);
+        transition: all 200ms linear;
+       
+        
+        &--expanded {
+              transform: rotate(90deg);
+        }
+    }
+    &__subtitle {
+        margin: 0;
+        
+        font-size: 1.4rem;
+     
+        display: inline-block;
+        font-weight: 400;
+       text-shadow: 0px 1px 1px rgba(#D6D4D4, .2);
+        transform: translateY(-25%);
+        @mixin atMedium {
+             padding-left: 3.5rem;
+        }
+       
+    }
+    
+    &__phone-block {
+        
+        padding: 0;
+        text-align: left;
+        border-radius: 5px;
+        margin: 0;
+    }
+    h4 {
+        @mixin atMedium {
+            text-align: left;
+            
+        }
+        text-align: center;
+        
+        margin-top: 2rem;
+        margin-bottom: 0;
+        padding-bottom: .5rem;
+    }
+    strong {
+        font-weight: 500;
+    }
+    
+    
+    p {
+    text-align: center;
+         padding-left: .5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        @mixin atMedium {
+             padding-left: 0rem;
+            text-align: left;
+        }
+        
+    }
+}

@@ -1,0 +1,23 @@
+body {
+   font-family:   'Roboto', sans-serif;
+    overflow-x: hidden; 
+    
+
+    background-color: #fff;   
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $mainOrange;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+* {
+    box-sizing: border-box;
+}

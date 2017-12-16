@@ -1,0 +1,14 @@
+.arrow {
+    
+  display: none;
+    @mixin atMedium {
+        right: 100px;
+    margin-top: 5rem;
+   position: absolute;
+        display:block;
+        
+    }
+   
+    
+   
+}

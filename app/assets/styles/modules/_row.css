@@ -1,0 +1,70 @@
+.row {
+    
+  
+   
+  
+    &__medium-6--p-left {
+        padding-left: 100px;
+    }
+    
+    &__btn-container {
+        
+        text-align: center;
+    }
+    
+    @mixin clearfix;
+    
+    
+     &--otstup-prices > div {
+         padding-right: 65px;
+    }
+    &--otstup-prices {
+         margin-right: -65px;
+    }
+    &--t-padding {
+     
+    }  
+    &--otstup--features > div {
+        padding-right: 105px;
+    }
+    &--otstup--features {
+        margin-right: -105px;
+    } 
+    &--otstup {
+        margin-right: -25px; 
+    }
+    &--otstup > div {
+        padding-right: 25px;
+       
+    }
+    @mixin atMedium { 
+        
+        &__medium-6 {
+            float: left;
+            width: 50%;
+            
+        }
+        
+        &__4 {
+            float: left;
+            width: 33%;
+            padding-left: 2rem;
+        
+        }
+    
+       
+    }
+  
+  /*equal hight rule   */    
+      
+ &--equal-height-medium {
+     
+     @mixin atMedium {
+         display: flex;
+     }
+     
+     & > div {
+         display: flex;
+     }
+    }
+}

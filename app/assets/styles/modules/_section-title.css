@@ -1,0 +1,121 @@
+.section-title {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+    
+    
+    @mixin atSmall {
+        font-size: 1rem;
+    } 
+    &--info {
+        font-size: 1rem;
+        color: $mainGrey;
+        font-weight: 600;
+        display: inline-block;
+        padding: .3rem;
+    }  
+    &--features {
+        font-size: 1.8rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }   
+    &--first {
+        font-size: 1.4rem;
+        padding-bottom: 7rem; 
+        
+        @mixin atSmall {
+        padding-bottom: 3rem;
+          
+            
+    }
+        
+    }
+    &--grey {
+        color: $mainGrey;
+        font-weight: 400;
+    }
+    &__icon {
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: .2rem;
+        
+        
+        @mixin atSmall {
+            position: relative;
+            top: 8px;
+            margin-right: .9rem;
+            margin-left: 0;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+    &__icon-footer {
+        
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+        
+        
+        @mixin atSmall {
+            
+            position: relative;
+            top: 8px;
+            margin-right: .9rem;
+            margin-left: 0;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+    &__icon2 {
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: .2rem;
+        
+        @mixin atSmall {
+            position: relative;
+            top: 4px;
+            margin-right: .9rem;
+            margin-left: 0;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+     &__icon3 {
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: .2rem;
+        
+        @mixin atSmall {
+            position: relative; 
+            top: 35px;
+            margin-right: .9rem;
+            margin-left: 0;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+    &__mail {
+        text-align: center;
+        background-color: rgba(#484E53, 0);
+        padding-bottom: .5rem;
+       
+    }
+    &__maillink {
+        color: #000;
+        font-weight: 400;
+        text-decoration: none;
+    }
+    &__maillink:hover {
+        text-decoration: underline;
+    }
+    
+}

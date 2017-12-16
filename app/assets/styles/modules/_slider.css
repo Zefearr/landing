@@ -1,0 +1,22 @@
+.slider {
+    
+    width: 1210px;
+    height: 302px;
+  position: absolute;
+    z-index: 99;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    
+    &__slide {
+        width: 400px;
+        height: 300px;
+    }
+   
+
+    
+    
+  
+    
+  
+}

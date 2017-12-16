@@ -1,0 +1,122 @@
+.hero-slider {
+   
+    width: 400px;
+    height: 300px;
+   border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+   
+   
+    
+  
+   
+   
+
+  div {
+    outline: none;
+  }
+
+  &__interior {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    
+    @mixin atMedium {
+    margin-top: 5rem;
+     background-color: rgba(#fff, .5);
+ 
+      
+    }
+  }
+    
+    &__gots {
+      
+        text-align: center;
+      padding: 1rem;
+    background-color: white;
+        display: inline-block;
+    }
+    ul {
+        margin:0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+    }
+
+  &__slide {
+      
+     
+     width: 400px;
+      height: 300px;
+      float: left;
+   
+      
+      
+  
+  }
+
+  &__overlay {
+  
+  display: inline-block;
+     
+   
+    background-color: rgba(#fff, .7);
+    padding: 1rem;
+    color: black;
+      
+    @mixin atMedium {
+      
+       float: left;
+       
+    }
+  }
+
+}
+
+.slick-dots {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  top: 15px;
+  @mixin atMedium {
+    top: 15px;
+  }
+}
+
+.slick-dots {
+
+  li {
+    list-style: none;
+    display: inline;
+  }
+
+  li button {
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    border-radius: 10%;
+    border: none;
+    margin: 0 4px;
+    padding: 0;
+    outline: none;
+    transition: background-color .3s ease-out;
+    cursor: pointer;
+  }
+
+  .slick-active button {
+    background-color: #FFF;
+  }
+
+}

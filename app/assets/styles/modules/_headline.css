@@ -1,0 +1,59 @@
+.headline {
+   font-weight: 300;
+    font-size: 1.2rem;
+    color: $mainGrey;
+    text-align: center;
+    
+    @mixin atSmall {
+        font-size: 1.8rem;
+        text-align: left;
+        
+    }
+    &--background {
+        background-color: rgba(#42494B, .3);
+       color: #1d2120;
+        text-align: center;
+        
+        font-size: 1.4rem;
+        font-weight:500;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    
+    &--centered {
+        text-align: center;
+        padding-top: 2rem;
+         padding-bottom: 2rem;
+        margin: 0;
+    }
+    &--marker {
+      padding:0;
+        margin:0;
+       
+    }
+    
+    &--orange {
+        color: $mainOrange;
+        
+    }
+    &--small {
+        font-size: 1.3rem;
+        font-weight: 600;
+    
+    }
+    &--b-margin-small {
+        margin-bottom:  1.5em;
+    }
+    &--b-margin-large {
+        margin-bottom: 1.4em;
+    }
+    &--no-t-margin {
+        margin-top:.5rem;
+         margin-bottom:0;
+        
+        @mixin atMedium {
+            margin-top:0;
+            margin-bottom:0;
+        }
+    }
+}

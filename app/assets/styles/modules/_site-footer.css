@@ -1,0 +1,70 @@
+.site-footer {
+    background-color: #484E53;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px dotted rgba(#000, .6);
+   
+    
+    &__text {
+        margin: 0;
+        font-weight: 500;
+        margin-top: 2rem;
+        font-size: .8rem;
+        padding-top: 2rem;
+        display: block;
+        border-top: 1px dotted rgba(#000, .6);
+    }
+    &__lang-container {
+          padding: .5rem;
+         margin-left: 1rem;
+          float: left;
+            font-weight: 400;
+        
+        @mixin atMedium {
+            float: right;
+            transform: translateY(-65%) translateX(-25%);
+        }
+        a {
+             color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            padding-right: .5rem;
+            font-size: .9rem;
+            border-right: 1px solid #000;
+        }
+        a:last-child {
+            border-right: none;
+            padding-left: .4rem;
+        }
+    } 
+    &__logo__graphic {
+        text-indent: -9999px; 
+    }
+    
+   /* &__social {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+         right: 10px;
+        width:30px;
+        height: 30px;
+        background: url(/assets/images/icons/instagramicon.svg); 
+        transition: all .5s ease;
+        &:hover {
+             background: url(/assets/images/icons/instagramicon.svg);
+              transition: all .5s ease;
+        }
+        @mixin atSmall {
+               transform: translateY(-80%) translateX(50%);
+             right: auto;
+        }
+        
+    }*/
+  
+   
+   
+  
+  
+    
+    
+}

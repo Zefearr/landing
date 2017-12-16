@@ -1,0 +1,66 @@
+.page-section {
+   background-color: #D3D3D4;
+    padding-top: 1.5rem;
+    
+    &--gallery {
+        background-color:#484E53;
+        margin:0;
+        padding:0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      
+    }
+    
+    &--info {
+     background-color: #5a5f64;
+       padding-top: 1rem;
+       
+    }
+    &--slider {
+        background-color: lightblue;
+        margin:0;
+      
+        padding:0;
+      
+    }
+   
+    &--first {
+        padding-bottom: 1.5rem;
+        
+    }
+    
+    &--blue { 
+        background-color: #677077;
+        color: #fff; 
+    }
+     &--blue2 { 
+        
+         padding-top: 2rem;
+         padding-bottom: 2rem;
+        background-color: #677077;
+        color: #fff; 
+    }
+    
+    &--no-b-until-medium {
+        padding-bottom: 0;
+        
+        @mixin atMedium {
+            padding-bottom: 4.5rem;
+        }
+    }
+       &--no-b-until-large {
+        padding-bottom: 0;
+        
+        @mixin atLarge {
+            padding-bottom: 2rem; 
+        }
+    }
+   
+    
+    &--prices {  
+       background-color: #D3D3D4;
+          
+      
+           
+    }
+}
