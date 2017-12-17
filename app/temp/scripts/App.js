@@ -11121,6 +11121,10 @@ var _Info = __webpack_require__(9);
 
 var _Info2 = _interopRequireDefault(_Info);
 
+var _scroll = __webpack_require__(10);
+
+var _scroll2 = _interopRequireDefault(_scroll);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
@@ -11132,6 +11136,7 @@ var stickyHeader = new _StickyHeader2.default();
 var modal = new _Modal2.default();
 var info = new _Info2.default();
 var pageBanner = new _PageBanner2.default();
+var Scroll = new _scroll2.default();
 
 /***/ }),
 /* 3 */
@@ -11283,11 +11288,13 @@ var StickyHeader = function () {
         this.frontTitle = (0, _jquery2.default)(".base-banner__title");
         this.frontSubtitle = (0, _jquery2.default)(".base-banner__subtitle");
         this.headerText = (0, _jquery2.default)(".site-header__addtext");
-        this.HeaderForm = (0, _jquery2.default)(".base-banner__form");
+        this.FormAppearsTrigger = (0, _jquery2.default)(".btn--orange");
+        this.BottomForm = (0, _jquery2.default)(".site-feedback__form");
         this.ScrollToTopArrow = (0, _jquery2.default)(".scroll-to-top");
         this.ArrowToTopTriggerElement = (0, _jquery2.default)(".prices");
         this.createHeaderWaypoint();
         this.createTopwaypointtrigger();
+        this.createFormWaypoint();
         this.pageSections = (0, _jquery2.default)(".page-section");
         this.headerLinks = (0, _jquery2.default)(".primary-nav a");
         this.createPageSectionWaypoints();
@@ -11307,19 +11314,34 @@ var StickyHeader = function () {
                 element: this.headerTriggerElement[0],
                 handler: function handler(direction) {
                     if (direction == "down") {
-                        that.HeaderForm.addClass("base-banner__form--visible");
+
                         that.frontSubtitle.addClass("base-banner__subtitle--small");
                         that.frontTitle.addClass("base-banner__title--small");
                         that.siteHeader.addClass("site-header--dark");
                         that.headerText.addClass("site-header__addtext--visible");
                     } else {
-                        that.HeaderForm.removeClass("base-banner__form--visible");
+
                         that.frontSubtitle.removeClass("base-banner__subtitle--small");
                         that.siteHeader.removeClass("site-header--dark");
                         that.headerText.removeClass("site-header__addtext--visible");
                         that.frontTitle.removeClass("base-banner__title--small");
                     }
                 }
+            });
+        }
+    }, {
+        key: 'createFormWaypoint',
+        value: function createFormWaypoint() {
+            var that = this;
+            new Waypoint({
+                element: this.FormAppearsTrigger[0],
+                handler: function handler(direction) {
+                    if (direction == "down") {
+                        that.BottomForm.addClass("site-feedback__form--visible");
+                    } else {
+                        that.BottomForm.removeClass("site-feedback__form--visible");
+                    }
+                }, offset: "50%"
             });
         }
     }, {
@@ -11895,6 +11917,53 @@ var Info = function () {
 }();
 
 exports.default = Info;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var scroll = function () {
+    function scroll() {
+        _classCallCheck(this, scroll);
+
+        this.ScrollToTopArrow = (0, _jquery2.default)(".scroll-to-top");
+        this.HTML = (0, _jquery2.default)('html, body');
+        this.events();
+    }
+
+    _createClass(scroll, [{
+        key: 'events',
+        value: function events() {
+            this.ScrollToTopArrow.click(this.scrolltotop.bind(this));
+        }
+    }, {
+        key: 'scrolltotop',
+        value: function scrolltotop() {
+            this.HTML.animate({ scrollTop: 0 }, 800);
+        }
+    }]);
+
+    return scroll;
+}();
+
+exports.default = scroll;
 
 /***/ })
 /******/ ]);

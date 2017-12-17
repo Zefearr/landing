@@ -10,11 +10,13 @@ class StickyHeader {
         this.frontTitle = $(".base-banner__title");
         this.frontSubtitle = $(".base-banner__subtitle"); 
         this.headerText = $(".site-header__addtext");
-        this.HeaderForm = $(".base-banner__form");
+        this.FormAppearsTrigger = $(".btn--orange");
+        this.BottomForm = $(".site-feedback__form");
         this.ScrollToTopArrow = $(".scroll-to-top");
         this.ArrowToTopTriggerElement = $(".prices");
         this.createHeaderWaypoint();
         this.createTopwaypointtrigger();
+        this.createFormWaypoint();
         this.pageSections = $(".page-section");
         this.headerLinks = $(".primary-nav a");
         this.createPageSectionWaypoints();
@@ -33,14 +35,14 @@ class StickyHeader {
             element: this.headerTriggerElement[0],
             handler: function(direction) {
                if(direction == "down") {
-                   that.HeaderForm.addClass("base-banner__form--visible");
+                   
                    that.frontSubtitle.addClass("base-banner__subtitle--small");
                     that.frontTitle.addClass("base-banner__title--small");
                      that.siteHeader.addClass("site-header--dark");
                    that.headerText.addClass("site-header__addtext--visible");
                  
                } else {
-                    that.HeaderForm.removeClass("base-banner__form--visible");
+                  
                     that.frontSubtitle.removeClass("base-banner__subtitle--small");
                       that.siteHeader.removeClass("site-header--dark");
                     that.headerText.removeClass("site-header__addtext--visible");
@@ -49,6 +51,23 @@ class StickyHeader {
                }
             }
         });
+    }
+    createFormWaypoint() {
+       var that = this;
+        new Waypoint({
+            element: this.FormAppearsTrigger[0],
+            handler: function(direction) {
+               if(direction == "down") {
+                    that.BottomForm.addClass("site-feedback__form--visible");
+                 
+                 
+               } else {
+                    that.BottomForm.removeClass("site-feedback__form--visible"); 
+                 
+               
+               }
+            }, offset: "50%"
+        }); 
     }
     
     createPageSectionWaypoints() {
@@ -101,4 +120,5 @@ class StickyHeader {
     
 }
 
-export default StickyHeader; 
+
+export default StickyHeader;

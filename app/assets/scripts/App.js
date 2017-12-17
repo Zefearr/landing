@@ -5,6 +5,7 @@ import StickyHeader from './modules/StickyHeader';
 import PageBanner from './modules/PageBanner';
 import Modal from './modules/Modal';
 import Info from './modules/Info';
+import scroll from './modules/scroll';
 
 
 
@@ -21,6 +22,8 @@ var stickyHeader = new StickyHeader();
 var modal = new Modal();
 var info = new Info();
 var pageBanner = new PageBanner();
+var Scroll = new scroll();
+
 
 
 
