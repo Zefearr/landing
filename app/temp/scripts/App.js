@@ -11288,7 +11288,7 @@ var StickyHeader = function () {
         this.frontTitle = (0, _jquery2.default)(".base-banner__title");
         this.frontSubtitle = (0, _jquery2.default)(".base-banner__subtitle");
         this.headerText = (0, _jquery2.default)(".site-header__addtext");
-        this.FormAppearsTrigger = (0, _jquery2.default)(".btn--orange");
+        this.FormAppearsTrigger = (0, _jquery2.default)(".prices__features");
         this.BottomForm = (0, _jquery2.default)(".site-feedback__form");
         this.ScrollToTopArrow = (0, _jquery2.default)(".scroll-to-top");
         this.ArrowToTopTriggerElement = (0, _jquery2.default)(".prices");
@@ -11341,7 +11341,7 @@ var StickyHeader = function () {
                     } else {
                         that.BottomForm.removeClass("site-feedback__form--visible");
                     }
-                }, offset: "50%"
+                }, offset: "30%"
             });
         }
     }, {
@@ -11790,7 +11790,7 @@ var PageBanner = function () {
   function PageBanner() {
     _classCallCheck(this, PageBanner);
 
-    this.MainTitle = (0, _jquery2.default)(".base-banner__text-content");
+    this.MainTitle = (0, _jquery2.default)(".base-banner__overlay");
     this.Dot = (0, _jquery2.default)(".base-banner__dots");
     this.events();
   }
@@ -11798,13 +11798,13 @@ var PageBanner = function () {
   _createClass(PageBanner, [{
     key: "events",
     value: function events() {
-      this.Dot.click(this.toggleTitle.bind(this));
+      this.Dot.click(this.ChangeBackground.bind(this));
     }
   }, {
-    key: "toggleTitle",
-    value: function toggleTitle() {
+    key: "ChangeBackground",
+    value: function ChangeBackground() {
 
-      this.MainTitle.toggleClass("base-banner__text-content--hided");
+      this.MainTitle.toggleClass("base-banner__overlay--light");
     }
   }]);
 

@@ -4,7 +4,7 @@ import $ from 'jquery';
 class PageBanner {
     
     constructor() {
-      this.MainTitle = $(".base-banner__text-content");
+      this.MainTitle = $(".base-banner__overlay");
         this.Dot = $(".base-banner__dots");
          this.events();
     }
@@ -12,14 +12,18 @@ class PageBanner {
   
     
     events() { 
-          this.Dot.click(this.toggleTitle.bind(this)); 
+        this.Dot.click(this.ChangeBackground.bind(this));
+    
         
        
     }
+   
     
-      toggleTitle() {
+    
+    
+      ChangeBackground() {
           
-        this.MainTitle.toggleClass("base-banner__text-content--hided");     
+        this.MainTitle.toggleClass("base-banner__overlay--light");     
        
     }
  

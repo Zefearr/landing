@@ -10,7 +10,7 @@ class StickyHeader {
         this.frontTitle = $(".base-banner__title");
         this.frontSubtitle = $(".base-banner__subtitle"); 
         this.headerText = $(".site-header__addtext");
-        this.FormAppearsTrigger = $(".btn--orange");
+        this.FormAppearsTrigger = $(".prices__features");
         this.BottomForm = $(".site-feedback__form");
         this.ScrollToTopArrow = $(".scroll-to-top");
         this.ArrowToTopTriggerElement = $(".prices");
@@ -66,7 +66,7 @@ class StickyHeader {
                  
                
                }
-            }, offset: "50%"
+            }, offset: "30%"
         }); 
     }
     

@@ -17,8 +17,11 @@
     &__lang-container {
           padding: .5rem;
          margin-left: 1rem;
-          float: left;
+         display: inline-block;
+        padding-top: 1rem;
+        
             font-weight: 400;
+      
         
         @mixin atMedium {
             float: right;
@@ -41,25 +44,32 @@
         text-indent: -9999px; 
     }
     
-   /* &__social {
+    &__social {
         display: block;
         background-color: #fff;
-        position: absolute;
-         right: 10px;
         width:30px;
         height: 30px;
-        background: url(/assets/images/icons/instagramicon.svg); 
+        margin:auto;
+        background: url(/assets/images/icons/facebookblack.svg); 
         transition: all .5s ease;
         &:hover {
-             background: url(/assets/images/icons/instagramicon.svg);
+             background: url(/assets/images/icons/facebookinvert.svg);
               transition: all .5s ease;
         }
         @mixin atSmall {
                transform: translateY(-80%) translateX(50%);
-             right: auto;
+            float: left;
+            
+        }
+        &--modal {
+          
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            
         }
         
-    }*/
+    }
   
    
    
